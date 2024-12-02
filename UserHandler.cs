@@ -50,9 +50,7 @@ namespace MonsterTradingCardsGame
                 if(json != null)
                 {                                                               // submit payload to User.Create()
                     User.Create((string) json["username"]!,                     // will throw exception if failed.
-                                (string) json["password"]!,
-                                (string?) json["fullname"] ?? "",
-                                (string?) json["email"] ?? "");
+                                (string) json["password"]!);
                     status = HttpStatusCode.OK;
                     reply = new JsonObject() { ["success"] = true,
                                                 ["message"] = "User created."};
@@ -97,9 +95,7 @@ namespace MonsterTradingCardsGame
                     {
                         status = HttpStatusCode.OK;
                         reply = new JsonObject() { ["success"] = true,          // prepare response
-                            ["username"] = user!.UserName,
-                            ["fullname"] = user!.FullName,
-                            ["email"] = user.EMail };
+                            ["username"] = user!.UserName};
                     }
                 }
                 else

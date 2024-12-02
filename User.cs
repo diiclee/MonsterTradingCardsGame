@@ -40,20 +40,32 @@ namespace MonsterTradingCardsGame
         {
             get; private set;
         } = string.Empty;
-
-
-        /// <summary>Gets or sets the user's full name.</summary>
-        public string FullName
+        
+        public string Password
         {
-            get; set;
+            get; private set;
         } = string.Empty;
-
-
-        /// <summary>Gets or sets the user's e-mail address.</summary>
-        public string EMail
+        
+        public List<ICard> Deck
         {
-            get; set;
-        } = string.Empty;
+            get; private set;
+        } 
+        
+        public List<ICard> Stack
+        {
+            get; private set;
+        }
+
+        public int Coins
+        {
+            get; private set;
+        }
+
+        public int Elo
+        {
+            get; private set;
+        }
+        
 
 
 
@@ -91,7 +103,7 @@ namespace MonsterTradingCardsGame
         /// <param name="fullName">Full name.</param>
         /// <param name="eMail">E-mail addresss.</param>
         /// <exception cref="UserException">Thrown when the user name already exists.</exception>
-        public static void Create(string userName, string password, string fullName = "", string eMail = "")
+        public static void Create(string userName, string password)
         {
             if(_Users.ContainsKey(userName))
             {
@@ -101,8 +113,11 @@ namespace MonsterTradingCardsGame
             User user = new()
             {
                 UserName = userName,
-                FullName = fullName,
-                EMail = eMail
+                Password = password,
+                Deck = new List<ICard>(),
+                Stack = new List<ICard>(),
+                Coins = 20,
+                Elo = 100,
             };
 
             _Users.Add(user.UserName, user);
@@ -127,12 +142,22 @@ namespace MonsterTradingCardsGame
         ///          otherwise success flag is FALSE and token is empty.</returns>
         public static (bool Success, string Token) Logon(string userName, string password)
         {
-            if(_Users.ContainsKey(userName))
+            if(_Users.ContainsKey(userName) && ValidatePassword(userName, password)) //check if right user with right password  
             {
                 return (true, Token._CreateTokenFor(_Users[userName]));
+                
             }
 
             return (false, string.Empty);
+        }
+
+        public static bool ValidatePassword(string userName, string password)
+        {
+            if (_Users.ContainsKey(userName) && _Users[userName].Password == password)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
