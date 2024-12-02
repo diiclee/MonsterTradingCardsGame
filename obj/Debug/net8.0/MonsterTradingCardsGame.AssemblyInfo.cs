@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MonsterTradingCardsGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d83b9db1571cc777c86db1a824eeeee5bdc010ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3c884cad13c450036d21c36a48db5498dd496f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("MonsterTradingCardsGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MonsterTradingCardsGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
