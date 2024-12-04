@@ -27,7 +27,8 @@ namespace MonsterTradingCardsGame
         
         /// <summary>Creates a new instance of this class.</summary>
         private User()
-        {}
+        {
+        }
 
 
 
@@ -45,16 +46,18 @@ namespace MonsterTradingCardsGame
         {
             get; private set;
         } = string.Empty;
-        
+
         public List<ICard> Deck
         {
-            get; private set;
-        } 
-        
+            get;
+            private set;
+        } = null!;
+
         public List<ICard> Stack
         {
-            get; private set;
-        }
+            get;
+            private set;
+        } = null!;
 
         public int Coins
         {
