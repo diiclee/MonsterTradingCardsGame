@@ -3,8 +3,8 @@ namespace MonsterTradingCardsGame;
 public class SpellCard : Card
 {
     //constructor
-    public SpellCard(string name, Element elementType)
-    : base(name, 20, elementType)
+    public SpellCard(string name, int damage, Element elementType)
+    : base(name, damage, elementType)
     {
     }
 }

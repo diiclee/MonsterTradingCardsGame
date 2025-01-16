@@ -12,7 +12,7 @@ public interface ICard
 
     public int Damage
     {
-        get;
+        get; set;
     }
 
     public Element ElementType

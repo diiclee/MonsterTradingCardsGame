@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Documents\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\MonsterTradingCardsGame.csproj": {}
+    "C:\\Users\\ASUS\\OneDrive\\Dokumente\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\MonsterTradingCardsGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Documents\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\MonsterTradingCardsGame.csproj": {
+    "C:\\Users\\ASUS\\OneDrive\\Dokumente\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\MonsterTradingCardsGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\MonsterTradingCardsGame.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Dokumente\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\MonsterTradingCardsGame.csproj",
         "projectName": "MonsterTradingCardsGame",
-        "projectPath": "C:\\Users\\ASUS\\Documents\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\MonsterTradingCardsGame.csproj",
+        "projectPath": "C:\\Users\\ASUS\\OneDrive\\Dokumente\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\MonsterTradingCardsGame.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Documents\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\OneDrive\\Dokumente\\FH\\3.SEM\\SWEN\\MonsterTradingCardsGame\\MonsterTradingCardsGame\\obj\\",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
@@ -27,7 +27,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -49,6 +50,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
